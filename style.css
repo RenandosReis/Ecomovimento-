@@ -1,0 +1,242 @@
+/* 1. CONFIGURAÇÕES GLOBAIS DO SITE */
+body {
+    background-image: url('folhas.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+/* 2. ESTRUTURA DO TOPO (HEADER) */
+header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px 50px; 
+}
+
+/* Tamanho da imagem da Logo */
+header img {
+    width: 300px;
+    height: 80px;
+}
+
+/* Caixinha que segura os links */
+header .menu-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo padrão dos links do menu */
+header .menu-links a {
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase; 
+    transition: 0.3s; /* Transição suave */
+}
+
+/* Efeito Hover dos links do menu (CORRIGIDO) */
+header .menu-links a:hover {
+    color: #a2d2a9; /* Muda a cor da letra para verde claro ao passar o mouse */
+}
+
+/* 3. CONTEÚDO PRINCIPAL (CARD) */
+.card-principal {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+
+/* Estilo padrão do Botão Saiba Mais */
+.card-principal .botao {
+    display: inline-block;
+    background-color: #2b2b2b;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s; /* Transição suave */
+}
+
+/* Efeito Hover do Botão */
+.card-principal .botao:hover {
+    background-color: hsl(138, 29%, 25%); /* Muda o fundo do botão para verde escuro */
+}
+/* ESTRUTURA DA TELA DO MAPA */
+.container-mapa {
+    display: flex;
+    gap: 20px;
+    padding: 30px 50px;
+    height: calc(100vh - 150px); /* Ajusta a altura na tela */
+}
+
+/* Painel da Lista de Ecopontos */
+.lista-ecopontos {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 25px;
+    border-radius: 12px;
+    width: 350px;
+    overflow-y: auto;
+}
+
+.lista-ecopontos h2 {
+    margin-top: 0;
+    color: #a2d2a9;
+}
+
+.lista-ecopontos ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.lista-ecopontos li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+/* Área reservada para o Google Maps */
+#mapa {
+    flex: 1;
+    background-color: #2b2b2b; /* Fundo temporário enquanto o mapa não carrega */
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+
+}
+/* ESTRUTURA DO BLOG */
+.container-blog {
+    padding: 30px 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.container-blog h1 {
+    color: #a2d2a9;
+    margin-bottom: 5px;
+}
+
+.container-blog .subtitulo {
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Organização dos Cards em Grade */
+.grid-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-post {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #a2d2a9;
+    transition: 0.3s;
+}
+
+.card-post:hover {
+    transform: translateX(5px); /* Efeito sutil de deslizar ao passar o mouse */
+}
+
+.card-post h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.card-post .data {
+    font-size: 12px;
+    opacity: 0.6;
+    margin-bottom: 15px;
+}
+
+.card-post .leia-mais {
+    color: #a2d2a9;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.card-post .leia-mais:hover {
+    color: white;
+}
+/* ESTRUTURA DO FORMULÁRIO DE DENÚNCIA */
+.container-form {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.container-form h1 {
+    color: #a2d2a9;
+    margin-top: 0;
+}
+
+.form-eco {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-eco input, .form-eco textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: white;
+    font-family: sans-serif;
+}
+
+.form-eco label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ESTRUTURA DE CONTATOS E FAQ */
+.container-contato {
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.caixa-info, .caixa-faq {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.caixa-info h1, .caixa-faq h2 {
+    color: #a2d2a9;
+    margin-top: 0;
+}
+
+.item-faq {
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.item-faq h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
